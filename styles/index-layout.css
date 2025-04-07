@@ -17,52 +17,47 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
 }
 
 /* ====== HEADER STRUCTURE ====== */
 
-/* Add padding around the header */
-header {
-    padding: 20px 40px;
-}
-
-/* Top section of the header, used for positioning logo and title */
-.header-top {
+.index-header-top {
     position: relative;
     height: 100px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px; /* Add padding to keep the logo away from the left edge */
 }
 
-/* Logo image styling and centering vertically */
-.navbar-image {
+/* Logo image styling */
+.index-navbar-image {
     width: 10em;
     height: auto;
-    position: absolute;
+    position: absolute;      /* Keep the logo in the top left corner */
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
-/* Title centered both horizontally and vertically */
-.header-title {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+/* Title centered across the whole page */
+.index-header-title {
     margin: 0;
-    white-space: nowrap;
+    font-size: 2em;
+    text-align: center;
+    width: 100%;            /* Take up the full width of the page */
+    position: absolute;     /* Allow title to be centered independently */
+    left: 50%;              /* Center the title */
+    transform: translateX(-50%); /* Offset to ensure exact centering */
 }
 
 /* ====== NAVIGATION POSITIONING ====== */
 
 /* Center the nav bar and give it top margin */
-nav {
+.index-navbar {
     text-align: center;
     margin-top: 1em;
 }
 
 /* Use inline-flex for nav list, center it, and space out items */
-nav ul {
+.index-navbar-list {
     display: inline-flex;
     gap: 2em;
     list-style: none;
@@ -70,26 +65,21 @@ nav ul {
 }
 
 /* Add padding inside each navigation list item */
-nav li {
+.index-navbar-list li {
     padding: 0.5em 1em;
 }
 
 /* Style anchor links in nav with padding */
-nav a {
+.index-navbar-list a {
     padding: .25em 1em;
 }
 
-/* Add hover effect with same padding for smooth transition */
-nav a:hover {
+/* Add hover effect */
+.index-navbar-list a:hover {
     padding: .25em 1em;
 }
 
-/* ====== MAIN SECTION SPACING ====== */
-
-/* Allow main content to expand and fill available space */
-main {
-    flex: 1;
-}
+/* ====== SECTION STYLING ====== */
 
 /* Style all section elements with padding and center text */
 section {
@@ -102,4 +92,29 @@ section h2 {
     margin-bottom: 20px;
 }
 
-/* Style for buttons or links that act*
+/* ====== BUTTON STYLES ====== */
+
+.index-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px;
+}
+
+/* ====== FOOTER STYLING ====== */
+
+/* Footer at the bottom of the page */
+.index-footer {
+    padding: 20px 0;
+    clear:both;
+}
+
+.index-footer p:first-child {
+    float:left;
+}
+
+.index-footer p:last-child {
+    float:right;
+    text-align: right;
+    padding-right: 1em;
+}
