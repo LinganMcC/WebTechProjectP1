@@ -1,0 +1,178 @@
+
+                                                /* ====== INDEX PAGE ====== */
+/* by Liam McCarthy */
+/* ====== BASE COLORS AND FONTS ====== */
+body {
+    background-color: #ffedd3;
+    color: #27233A;
+}
+
+/* ====== HEADER STYLES ====== */
+header {
+    background-color: #ffedd3;
+}
+
+.header-title {
+    font-size: 2em;
+    color: #27233A;
+}
+
+/* ====== NAVIGATION COLORS ====== */
+nav a {
+    color: #27233A;
+    font-weight: bold;
+    text-decoration: none; /* Removes underline */
+}
+
+nav a:hover {
+    color: #201b38;
+    background-color: #f7d6a9;
+    text-decoration: none; /* Removes underline on hover */
+}
+/* ====== HERO SECTION COLORS ====== */
+.hero {
+    background-color: #DCC48E;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #27233A;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #27233A;
+}
+
+/* ====== BUTTON STYLES ====== */
+.index-button {
+    background-color: #505168;
+    color: white;
+    box-shadow: 0.125em 0.125em #857756;
+}
+
+.index-button:hover {
+    background-color: #3a3a4d;
+    color: white;
+}
+
+.index-button:active {
+    background-color: #3a3a4d;
+    color: white;
+    box-shadow: none;
+}
+
+/* ====== SECTION COLORS ====== */
+.services,
+.hiring,
+.contact {
+    color: #27233A;
+}
+
+/* ====== FOOTER COLORS ====== */
+footer {
+    background-color: #27233A;
+    color: white;
+}
+/* ====== JOBS PAGE====== */
+
+/* ====== INDEX PAGE ====== */
+/* by Liam McCarthy */
+/* ====== BASE COLORS AND FONTS ====== */
+body {
+    background-color: #ffedd3;
+    color: #27233A;
+}
+
+/* ====== HEADER STYLES ====== */
+header {
+    background-color: #ffedd3;
+}
+
+.header-title {
+    font-size: 2em;
+    color: #27233A;
+}
+
+/* ====== NAVIGATION COLORS ====== */
+nav a {
+    color: #27233A;
+    font-weight: bold;
+    text-decoration: none; /* Removes underline */
+}
+
+nav a:hover {
+    color: #201b38;
+    background-color: #f7d6a9;
+    text-decoration: none; /* Removes underline on hover */
+}
+/* ====== HERO SECTION COLORS ====== */
+.hero {
+    background-color: #DCC48E;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #27233A;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #27233A;
+}
+
+/* ====== BUTTON STYLES ====== */
+.index-button {
+    background-color: #505168;
+    color: white;
+    box-shadow: 0.125em 0.125em #857756;
+}
+
+.index-button:hover {
+    background-color: #3a3a4d;
+    color: white;
+}
+
+.index-button:active {
+    background-color: #3a3a4d;
+    color: white;
+    box-shadow: none;
+}
+
+/* ====== SECTION COLORS ====== */
+.services,
+.hiring,
+.contact {
+    color: #27233A;
+}
+
+/* ====== FOOTER COLORS ====== */
+footer {
+    background-color: #27233A;
+    color: white;
+}
+
+                                                    /* ====== JOBS PAGE====== */
+
+/* ====== HEADING FORMATTING ====== */
+.jobs-h2 {
+    border: 5px solid #d2b48c;
+    margin: 0;
+    padding: 1em;
+    background-color: #d2b48c;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.jobs-h3 {
+    border: 5px solid #5f7489; 
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #5f7489; 
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px; /* Smooth edges */
+    color: whitesmoke;
+    width: 100%;
+}
