@@ -1,0 +1,79 @@
+/*
+filename: stylesheet
+authors: Sokhour KIM
+created: 26.03.2025
+last modified: 31.03.2025
+description: index.html, jobs.html, about.html
+*/
+
+/* style.css */
+body {
+    background: linear-gradient(to right, skyblue, dodgerblue, pink);
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 10px 30px;
+    height: 100px;
+    width: 100%;
+}
+
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.header a {
+    color: black;
+    text-align: center;
+    padding: 12px;
+    border-radius: 20px;
+    float: right;
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: black
+}
+
+.button {
+    border-radius: 4px;
+    background-color: dodgerblue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 12px;
+    width: 100px;
+    margin: 5px;
+}
+
+main {
+    border: 2px solid white;
+    background-color: #fff;
+    text-align: center;
+    margin: 60px;
+    padding: 40px;
+    border-radius: 16px;
+}
+
+fieldset {
+    border-radius: 16px;
+    border-color: skyblue;
+}
+
+fieldset>div {
+    margin: 16px;
+}
+
+footer {
+    clear: both;
+    font-family: arial;
+    margin: 10px 5px;
+}
