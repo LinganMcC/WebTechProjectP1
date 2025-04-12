@@ -1,79 +1,389 @@
-/*
-filename: stylesheet
-authors: Sokhour KIM
-created: 26.03.2025
-last modified: 31.03.2025
-description: index.html, jobs.html, about.html
-*/
-
-/* style.css */
+/* ====== GLOBAL VARIABLES ====== */
 body {
-    background: linear-gradient(to right, skyblue, dodgerblue, pink);
-
-}
-
-* {
-    box-sizing: border-box;
+    background-color: #ffedd3;
+    color: #27233A;
     font-family: Arial, sans-serif;
 }
 
-.header {
-    background-color: #f1f1f1;
-    padding: 10px 30px;
-    height: 100px;
-    width: 100%;
-}
-
-.header a.active {
-    background-color: dodgerblue;
+/* ====== BUTTON STYLES ====== */
+.button, .cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #44415a;
     color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.header a {
-    color: black;
+.button:hover, .cta-button:hover {
+    background-color: #3a3a4d;
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+.button:active, .cta-button:active {
+    box-shadow: none;
+}
+
+/* ====== HEADER STYLES ====== */
+header {
+    background-color: #ffedd3;
+}
+
+.header-title {
+    font-size: 2em;
+    color: #27233A;
+}
+
+/* ====== NAVIGATION COLORS ====== */
+nav a {
+    color: #27233A;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Adds padding for better click area */
+    border-radius: 8px; /* Adds rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+nav a:hover {
+    color: white; /* Changes text color to white */
+    background-color: #44415a; /* Adds a dark background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transform: scale(1.05); /* Slightly enlarges the element */
+}
+
+/* ====== HERO SECTION ====== */
+.hero-with-aside {
+    background-color: #dcc48e;
+    padding: 40px 20px;
+}
+
+.hero-row {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.hero-left {
+    max-width: 600px;
+    margin-left: 30%;
     text-align: center;
-    padding: 12px;
-    border-radius: 20px;
-    float: right;
 }
 
-.header a:hover {
-    background-color: #ddd;
-    color: black
-}
-
-.button {
-    border-radius: 4px;
-    background-color: dodgerblue;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    padding: 12px;
-    width: 100px;
-    margin: 5px;
-}
-
-main {
-    border: 2px solid white;
-    background-color: #fff;
-    text-align: center;
-    margin: 60px;
-    padding: 40px;
+.hiring-card {
+    flex: 0 0 320px;
+    background-color: #fff9ec;
+    border: 2px solid #dcc48e;
     border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ====== MAIN CONTENT ====== */
+.main-wrapper {
+    padding: 2rem 1rem;
+}
+
+.main-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ====== FORM STYLES ====== */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff9ec;
+    border: 2px solid #dcc48e;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #27233A;
+}
+
+form div, fieldset {
+    margin-bottom: 20px;
 }
 
 fieldset {
-    border-radius: 16px;
-    border-color: skyblue;
+    border: 1px solid #ccc; /* Light border for embedding effect */
+    border-radius: 8px;
+    padding: 1rem; /* Reduce padding inside fieldsets */
+    margin-bottom: 1rem; /* Reduce spacing between fieldsets */
+    background-color: #fff; /* White background for contrast */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle inset shadow */
 }
 
-fieldset>div {
-    margin: 16px;
+legend {
+    font-weight: bold;
+    color: #3b3646;
+    padding: 0 0.5rem;
+    font-size: 1.1rem; /* Slightly smaller font size */
+    border-bottom: 2px solid #dcc48e; /* Add a bottom border for emphasis */
+    margin-bottom: 0.5rem; /* Reduce spacing below the legend */
 }
 
+label {
+    display: block;
+    margin-bottom: 4px; /* Reduce spacing below labels */
+    font-weight: bold;
+    color: #27233A;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px; /* Reduce padding inside inputs */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 0.9rem; /* Slightly smaller font size */
+    background-color: #fdfdfd; /* Slightly off-white background */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle inset shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0.5rem; /* Reduce spacing between inputs */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #3b3646; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(59, 54, 70, 0.3); /* Add glow effect */
+    outline: none; /* Remove default outline */
+}
+
+textarea {
+    resize: vertical;
+    height: 80px; /* Set a smaller default height */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px; /* Reduce spacing to the right of radio/checkbox */
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3b3646;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem; /* Add spacing above the button */
+}
+
+input[type="submit"]:hover {
+    background-color: #2a2733;
+    transform: scale(1.02); /* Slightly enlarges the button on hover */
+}
+
+/* Form Buttons */
+.next-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #3b3646;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.next-button:hover {
+    background-color: #2a2733;
+    transform: scale(1.05);
+}
+
+.next-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Form Container */
+.form-container {
+    text-align: center;
+    margin: 1rem auto; /* Reduce vertical spacing around the form */
+    padding: 1.5rem; /* Adjust padding for better spacing */
+    background-color: #fff9ec; /* Restore subtle background color */
+    border: 1px solid #dcc48e; /* Light border for embedding effect */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 900px; /* Increase the width of the form */
+    width: 90%; /* Ensure it adapts to smaller screens */
+}
+
+/* Form Header */
+.form-header {
+    font-size: 1.8rem; /* Slightly smaller font size */
+    color: #27233A;
+    margin-bottom: 0.5rem; /* Reduce spacing below the header */
+    border-bottom: 2px solid #dcc48e; /* Add a bottom border for separation */
+    padding-bottom: 0.5rem;
+}
+
+/* Progressive Form Styles */
+.step {
+    display: none;
+    padding: 1rem;
+    border: 2px solid #dcc48e;
+    border-radius: 8px;
+    background-color: #fff9ec;
+    margin-bottom: 1rem;
+}
+
+input[type="radio"]:checked + .step {
+    display: block;
+}
+
+/* Step Labels */
+.step-label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    color: #3b3646;
+    text-align: left;
+}
+
+.step-label:hover {
+    color: #2a2733;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ====== JOBS PAGE ====== */
+.job-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem; /* Adjust padding for better spacing */
+    background-color: #fff9ec; /* Restore subtle background color */
+    border: 2px solid #dcc48e; /* Light border for embedding effect */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensures smooth animation */
+}
+
+/* Job Title (Summary) Styling */
+.job-title {
+    font-size: 1.8rem;
+    color: #27233A;
+    margin-bottom: 1rem;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #dcc48e; /* Default brown color */
+    border-radius: 8px;
+    border: 2px solid #dcc48e; /* Adds a border for a polished look */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.job-title:hover {
+    background-color: #f4efe2; /* Light grey on hover */
+    transform: scale(1.02); /* Slightly enlarges the title on hover */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+}
+
+details {
+    margin-bottom: 1rem;
+    border: 2px solid #dcc48e;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff9ec; /* Restore subtle background color */
+    transition: all 0.3s ease;
+}
+
+details[open] {
+    background-color: #f4efe2; /* Slightly lighter background when open */
+    border-color: #f4efe2; /* Matches the open state background */
+}
+
+details summary {
+    list-style: none;
+    outline: none;
+}
+
+details[open] {
+    animation: dropdown 0.3s ease forwards;
+}
+
+@keyframes dropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.job-section p,
+.job-section ol,
+.job-section ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #27233A;
+}
+
+.job-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    color: #27233A;
+}
+
+.job-section h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #27233A;
+}
+
+/* Details and Summary Styling */
+summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+summary:hover {
+    color: #3b3646;
+}
+
+/* ====== FOOTER ====== */
 footer {
-    clear: both;
-    font-family: arial;
-    margin: 10px 5px;
+    background-color: #27233A;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
 }
