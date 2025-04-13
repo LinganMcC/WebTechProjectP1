@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcruSoft Solutions</title>
-    <link rel="stylesheet" href="styles/index-layout.css">
-    <link rel="stylesheet" href="styles/index-styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcruSoft Solutions</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link href="styles/layout.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- ===== HEADER ===== -->
-    <header class="index-header">
-        <div class="index-header-top">
-            <img class="index-navbar-image" src="logo.png" alt="EcruSoft Solutions Logo">
-            <h1 class="index-header-title">EcruSoft Solutions</h1>
-        </div>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-top">
+        <img src="styles/images/logo.png" alt="EcruSoft Logo" class="navbar-image">
+        <h1 class="header-title">EcruSoft Solutions</h1>
+    </div>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Careers</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+  </header>
 
-        <nav class="index-navbar">
-            <ul class="index-navbar-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- ===== HERO SECTION ===== -->
-    <section class="index-hero" id="home">
-        <h1>Innovative Software Solutions</h1>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-with-aside" id="home">
+    <div class="hero-row">
+      <div class="hero-left">
+        <h2>Innovative Software Solutions</h2>
         <p>Delivering high-quality digital experiences tailored for your business.</p>
-        <a href="#contact" class="index-button">Get in Touch</a>
-    </section>
+        <button class="cta-button">Get in Touch</button>
+      </div>
+      <aside class="hiring-card">
+        <h3>Hiring Now</h3>
+        <p>We're passionate about building scalable software that empowers businesses.</p>
+        <button class="cta-button">Apply Now</button>
+      </aside>
+    </div>
+  </section>
 
-    <!-- ===== SERVICES SECTION ===== -->
-    <section class="index-services" id="services">
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-wrapper">
+    <div class="main-content">
+      <section class="services" id="services">
         <h2>Our Services</h2>
         <p>We specialize in web development, software engineering, and cloud solutions.</p>
-    </section>
-
-    <!-- ===== HIRING SECTION ===== -->
-    <section class="index-hiring" id="hiring">
-        <h2>Hiring Now</h2>
-        <p>At EcruSoft Solutions we are always on the lookout for talented new prospects for our team!</p>
-        <p>Please click the button to see our current open positions</p>
-        <a href="#jobs" class="index-button">Apply Now</a>
-    </section>
-
-    <!-- ===== CONTACT SECTION ===== -->
-    <section class="index-contact" id="contact">
+      </section>
+      <section class="contact" id="contact">
         <h2>Contact Us</h2>
-        <p>Email: info@ecrusoft.com.au | Phone: (+61) 456-7890</p>
-    </section>
+        <p>Email: <a href="mailto:info@ecrusoft.com.au">info@ecrusoft.com.au</a> | 
+        Phone: <a href="tel:+614567890">(+61) 456-7890</a></p>
+      </section>
+    </div>
+  </main>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="index-footer">
-        <p>&copy; 2025 EcruSoft Solutions. All Rights Reserved.</p>
-        <p>jira link placeholder</p>
-    </footer>
-
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p class="footer-text">&copy; 2025 EcruSoft Solutions. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
