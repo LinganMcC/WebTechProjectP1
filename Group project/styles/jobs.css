@@ -1,0 +1,246 @@
+/*
+
+filename: []ustin Mac
+author: [Justin Mac]
+
+created: [02/04/2025]
+
+last modified: [13/04/2025]
+
+description: [jobs.html]
+
+*/
+
+/* ====== Reset default margins on the body and header elements ====== */
+body, header {
+    margin: 0;
+    padding: 0;
+    background-color: #f4efe2
+}
+
+* { font-family: arial, sans-serif; 
+    color: #27233A;
+}
+
+article {
+    flex-grow: 1; /* Pushes the footer to the bottom */
+}
+
+/* ====== HEADER STYLES ====== */
+header {
+    background-color: #ffedd3;
+}
+
+.header-title {
+    font-size: 2em;
+    color: #27233A;
+}
+
+/* ====== HEADER STYLES ====== */
+header {
+    background-color: #ffedd3;
+}
+
+.header-title {
+    font-size: 2em;
+    color: #27233A;
+}
+
+/* ====== NAVIGATION COLORS ====== */
+nav a {
+    color: #27233A;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Adds padding for better click area */
+    border-radius: 8px; /* Adds rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    display: inline-block;
+}
+
+nav a:hover {
+    color: white; /* Changes text color to white */
+    background-color: #44415a; /* Adds a dark background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transform: scale(1.05); /* Slightly enlarges the element */
+}
+
+/* ====== BUTTON STYLES ====== */
+.button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #44415a;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #44415a;
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+.button:active {
+    box-shadow: none;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    background-color: #27233A;
+    text-align: center;
+    padding: 1rem 0;
+}
+footer p {
+    color: white; /* Light color for contrast */
+    text-decoration: none;
+}
+
+/* ====== JOBS TITLE ====== */
+.view-jobs {
+    position: relative; /* Establishes a positioning context */
+    text-align: left;
+    color: #27233A;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    height: 150px;
+    background-color: #dcc48e; /* Default brown color */
+    border-radius: 8px;
+    border: 2px solid #dcc48e; /* Adds a border for a polished look */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.view-jobs:hover {
+    transform: scale(1.02); /* Slightly enlarges the title on hover */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+}
+
+.view-jobs p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 65px; /* Space between title and the weird floating box below */
+    border: #ffedd3 2px solid; /* Adds a border for a polished look */
+    background-color: white;
+    border-radius: 8px;
+    border-bottom: 2px solid #ffedd3; /* Adds a border for a polished look */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    display: inline-block;
+} 
+
+
+.view-jobs a {
+    position: absolute; /* Positions the link relative to .view-jobs */
+    bottom: 1px; /* Adjusts vertical position */
+    right: 4px; /* Adjusts horizontal position */
+    text-decoration: none;
+    font-weight: lighter;
+    border-radius: 8px;
+}
+
+
+/* ====== JOB DESCRIPTION ====== */
+*.jobs-description {
+    margin: 2rem 2rem 2rem 2rem;
+    border: 2px solid #dcc48e;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #ffedd3; /* Restore subtle background color */
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.jobs-h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: #dcc48e 2px solid; /* Adds a border for a polished look */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    display: block;
+}
+
+.back {
+    display: inline-block;
+    margin: 2rem;
+    padding: 0.8rem;
+    border: 2px solid #dcc48e;
+    border-radius: 8px;
+    background-color: #ffedd3;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    color: #27233A; /* Default text color */
+}
+
+.back:hover {
+    transform: scale(0.9); /* Shrinks the container to 90% of its size */
+    background-color: #44415a;
+    color: white; /* Changes text color to white */
+}
+
+.back:hover * {
+    color: white; /* Ensures all child elements inside .back also turn white */
+}
+
+.jobs-description p {
+    margin: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.jobs-description summary {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem; /* Adjusts the font size */
+    font-weight: bold; /* Makes the text stand out */
+    color: #27233A; /* Matches the default text color */
+    background-color: #ffedd3; /* Matches the container background */
+    padding: 0.8rem 1rem; /* Adds padding for better spacing */
+    border: 2px solid #dcc48e; /* Adds a border for a polished look */
+    border-radius: 8px; /* Rounds the corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    cursor: pointer; /* Indicates interactivity */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.jobs-description summary:hover {
+    background-color: #dcc48e; /* Changes background color on hover */
+    transform: scale(1.02); /* Slightly enlarges the element on hover */
+    color: #44415a; /* Changes text color on hover */
+}
+
+.jobs-description ol,
+.jobs-description ul {
+    margin: 1.5rem 2rem; /* Adds spacing around the list */
+    padding-left: 1.5rem; /* Adds indentation for list items */
+    list-style-position: inside; /* Ensures the bullets/numbers are inside the container */
+    font-size: 1rem; /* Adjusts the font size for readability */
+    line-height: 1.8; /* Improves spacing between list items */
+    color: #27233A; /* Matches the default text color */
+    background-color: white; /* Adds a subtle background color */
+    border: 2px solid #dcc48e; /* Adds a border for a polished look */
+    border-radius: 8px; /* Rounds the corners */
+    padding: 1rem; /* Adds internal spacing inside the list */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.jobs-description ol li,
+.jobs-description ul li {
+    margin-bottom: 0.8rem; /* Adds spacing between list items */
+    font-weight: bold; /* Makes the list items stand out */
+}
+
+.jobs-description ol {
+    list-style-type: decimal; /* Ensures ordered lists use numbers */
+}
+
+.jobs-description ul {
+    list-style-type: disc; /* Ensures unordered lists use bullets */
+}
+
+.jobs-description ul li strong {
+    color: #44415a; /* Highlights bold text inside list items */
+}
