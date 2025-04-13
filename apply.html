@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <!-- Metadata and stylesheets -->
     <meta charset="UTF-8">
     <meta name="description" content="Create Web Application">
     <meta name="keywords" content="HTML5, CSS layout">
@@ -14,10 +15,12 @@
 <body>
   <!-- ===== HEADER ===== -->
   <header>
+    <!-- Top section of the header with logo and title -->
     <div class="header-top">
       <img src="styles/images/logo.png" alt="EcruSoft Logo" class="navbar-image">
       <h1 class="header-title">EcruSoft Solutions</h1>
     </div>
+    <!-- Navigation bar -->
     <nav class="navbar">
       <ul class="navbar-list">
         <li><a href="index.html">Home</a></li>
@@ -28,11 +31,13 @@
     </nav>
   </header>
 
+  <!-- ===== MAIN CONTENT ===== -->
   <main>
     <div class="form-container">
       <h2 class="form-header">Application Form</h2>
+      <!-- Application form -->
       <form id="regform" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-        <!-- Step 1 -->
+        <!-- Step 1: Job Reference -->
         <fieldset>
           <legend>Step 1: Job Reference</legend>
           <div>
@@ -46,7 +51,7 @@
           </div>
         </fieldset>
 
-        <!-- Step 2 -->
+        <!-- Step 2: Personal Details -->
         <fieldset>
           <legend>Step 2: Personal Details</legend>
           <div>
@@ -63,7 +68,7 @@
           </div>
         </fieldset>
 
-        <!-- Step 3 -->
+        <!-- Step 3: Gender -->
         <fieldset>
           <legend>Step 3: Gender</legend>
           <label><input type="radio" name="gender" value="Male" required> Male</label>&ensp;
@@ -71,7 +76,7 @@
           <label><input type="radio" name="gender" value="Other" required> Other</label>
         </fieldset>
 
-        <!-- Step 4 -->
+        <!-- Step 4: Residence Address -->
         <fieldset>
           <legend>Step 4: Residence Address</legend>
           <div>
@@ -102,7 +107,7 @@
           </div>
         </fieldset>
 
-        <!-- Step 5 -->
+        <!-- Step 5: Contacts Information -->
         <fieldset>
           <legend>Step 5: Contacts Information</legend>
           <div>
@@ -115,7 +120,7 @@
           </div>
         </fieldset>
 
-        <!-- Step 6 -->
+        <!-- Step 6: Skills -->
         <fieldset>
           <legend>Step 6: Skills</legend>
           <label><input type="checkbox" name="skills" value="programming" class="skill-checkbox"> Programming Skills</label>&ensp;
@@ -127,13 +132,15 @@
           </div>
         </fieldset>
 
+        <!-- Submit button -->
         <input type="submit" class="button" value="Apply">
       </form>
     </div>
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer>
-    &copy; 2025 EcruSoft Solutions. All Rights Reserved.
+    <p>&copy; 2025 EcruSoft Solutions. All Rights Reserved.</p>
   </footer>
 
 </body>

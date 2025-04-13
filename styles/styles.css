@@ -83,6 +83,12 @@ header, nav {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.cta-button {
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
 .button:hover, .cta-button:hover {
     background-color: #3a3a4d;
     transform: scale(1.05); /* Slightly enlarges the button on hover */
@@ -92,33 +98,68 @@ header, nav {
     box-shadow: none;
 }
 
-/* ====== HEADER STYLES ====== */
+/* ===== HEADER STYLES ===== */
 header {
     background-color: #ffedd3;
     margin: 0;
     padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky; /* Make the header stick to the top */
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other elements */
+    border-bottom: 2px solid #dcc48e; /* Add a bottom border for separation */
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    height: 80px;
+}
+
+.navbar-image {
+    width: 8em;
+    height: auto;
 }
 
 .header-title {
-    font-size: 2em;
-    color: #27233A;
-}
-
-/* ====== NAVIGATION COLORS ====== */
-nav a {
-    color: #27233A;
+    font-size: 2rem;
+    color: #3b3646;
     font-weight: bold;
-    text-decoration: none;
-    padding: 0.5rem 1rem; /* Adds padding for better click area */
-    border-radius: 8px; /* Adds rounded corners */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    text-align: center;
 }
 
-nav a:hover {
-    color: white; /* Changes text color to white */
-    background-color: #44415a; /* Adds a dark background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-    transform: scale(1.05); /* Slightly enlarges the element */
+/* ===== NAVBAR STYLES ===== */
+.navbar {
+    background-color: #ffedd3; /* Matches the header background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    border-bottom: 2px solid #dcc48e; /* Adds a bottom border for separation */
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Moderate spacing between links */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-list a {
+    color: #27233A; /* Darker text color for better contrast */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    font-weight: 600; /* Slightly bolder font weight */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Balanced padding for better click area */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-list a:hover {
+    background-color: #44415a;
+    color: white;
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 /* ====== HERO SECTION ====== */
@@ -142,14 +183,75 @@ nav a:hover {
     text-align: center;
 }
 
-.hiring-card {
-    flex: 0 0 320px;
+.hero-section {
+    padding: 1.5rem;
     background-color: #fff9ec;
     border: 2px solid #dcc48e;
-    border-radius: 16px;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Embedded appearance */
+    margin-bottom: 2rem; /* Add spacing below each section */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px; /* Ensure sections are aligned and centered */
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle inner border for embedded effect */
+    z-index: -1;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #3b3646;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== HIRING CARD ===== */
+.hiring-card {
+    max-width: 400px;
+    margin: 0 auto;
     padding: 24px;
+    border: 2px solid #dcc48e;
+    border-radius: 12px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for emphasis */
+    background: linear-gradient(135deg, #fff9ec, #ffe4e1); /* Gradient background for a warm, inviting look */
     text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+    animation: bounce 1.5s infinite; /* Add a subtle bounce animation */
+    color: #3b3646;
+}
+
+.hiring-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.hiring-card p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #44415a;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* ====== MAIN CONTENT ====== */
@@ -482,6 +584,99 @@ summary:hover {
     line-height: 1.8; /* Increase line height for readability */
     max-width: 800px; /* Limit the width of the text */
     margin: 0 auto; /* Center the text */
+}
+
+/* ===== TESTIMONIALS SECTION STYLES ===== */
+.testimonials {
+    margin-top: 2rem; /* Adjust spacing to align with other sections */
+    padding: 1.5rem;
+    background-color: #fff9ec;
+    border: 2px solid #dcc48e;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Embedded appearance */
+}
+
+.testimonials h2 {
+    margin-bottom: 1.5rem;
+    color: #3b3646;
+}
+
+.testimonial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid #dcc48e;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+/* ====== CONTACT SECTION STYLES ====== */
+.contact {
+    background-color: #fff9ec;
+    border: 2px solid #dcc48e;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Embedded appearance */
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #3b3646;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #44415a;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #27233A;
+}
+
+.contact-info a {
+    color: inherit; /* Match the surrounding text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: none; /* Ensure no underline on hover */
+    color: #3b3646; /* Slightly darker color for hover effect */
+}
+
+/* ===== SERVICES SECTION STYLES ====== */
+.services {
+    background-color: #fff9ec;
+    border: 2px solid #dcc48e;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Embedded appearance */
+}
+
+.services h2 {
+    font-size: 2rem;
+    color: #3b3646;
+    margin-bottom: 1rem;
+}
+
+.services p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #44415a;
+    margin-bottom: 1.5rem;
 }
 
 /* ====== FOOTER ====== */
