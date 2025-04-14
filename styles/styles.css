@@ -1,4 +1,31 @@
 /* ====== GLOBAL VARIABLES ====== */
+
+/* ===== COMMONLY USED TRAITS PUT INTO CLASSES FOR EASIER READABILITY ===== */
+.text-center {
+    text-align: center;
+}
+
+.box-shadow {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rounded {
+    border-radius: 12px;
+}
+
+.bg-light {
+    background-color: #fff9ec;
+}
+
+.margin-auto {
+    margin: 2rem auto;
+}
+
+.padding-default {
+    padding: 1.5rem;
+}
+
+/* General styles for the body and text */
 body {
     background-color: #f9f5f0;
     color: #27233A;
@@ -7,11 +34,13 @@ body {
     padding: 0;
 }
 
+/* Headings styles */
 h2, h3, h4 {
     color: #3b3646;
     margin-bottom: 1rem;
 }
 
+/* Paragraph styles */
 p {
     line-height: 1.6;
     margin-bottom: 1rem;
@@ -98,18 +127,38 @@ header, nav {
     box-shadow: none;
 }
 
-/* ===== HEADER STYLES ===== */
-header {
-    background-color: #ffedd3;
-    margin: 0;
-    padding: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    position: sticky; /* Make the header stick to the top */
-    top: 0;
-    z-index: 1000; /* Ensure it stays above other elements */
-    border-bottom: 2px solid #dcc48e; /* Add a bottom border for separation */
+/* ===== CUSTOM ANIMATIONS ===== */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
+@keyframes dropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== HEADER STYLES ===== */
+/* Header background and sticky positioning */
+header {
+    background-color: #ffedd3;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header top section with logo and title */
 .header-top {
     display: flex;
     align-items: center;
@@ -118,11 +167,13 @@ header {
     height: 80px;
 }
 
+/* Logo image styles */
 .navbar-image {
     width: 8em;
     height: auto;
 }
 
+/* Header title styles */
 .header-title {
     font-size: 2rem;
     color: #3b3646;
@@ -131,36 +182,39 @@ header {
 }
 
 /* ===== NAVBAR STYLES ===== */
+/* Navbar container styles */
 .navbar {
-    background-color: #ffedd3; /* Matches the header background color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
-    border-bottom: 2px solid #dcc48e; /* Adds a bottom border for separation */
+    background-color: #ffedd3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #dcc48e;
 }
 
+/* Navbar list styles */
 .navbar-list {
     display: flex;
     justify-content: center;
-    gap: 1.5rem; /* Moderate spacing between links */
+    gap: 1.5rem;
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
+/* Navbar link styles */
 .navbar-list a {
-    color: #27233A; /* Darker text color for better contrast */
-    font-family: 'Arial', sans-serif; /* Clean, modern font */
-    font-weight: 600; /* Slightly bolder font weight */
+    color: #27233A;
+    font-weight: bold;
     text-decoration: none;
-    padding: 0.5rem 1rem; /* Balanced padding for better click area */
+    padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Navbar link hover effect */
 .navbar-list a:hover {
     background-color: #44415a;
     color: white;
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05);
 }
+
+                        /* =====INDEX PAGE STYLES ===== */
 
 /* ====== HERO SECTION ====== */
 .hero-with-aside {
@@ -190,22 +244,7 @@ header {
     border-radius: 12px;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Embedded appearance */
     margin-bottom: 2rem; /* Add spacing below each section */
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1100px; /* Ensure sections are aligned and centered */
     position: relative;
-    z-index: 1;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle inner border for embedded effect */
-    z-index: -1;
 }
 
 .hero-content h2 {
@@ -245,13 +284,97 @@ header {
     color: #44415a;
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+/* ===== TESTIMONIALS SECTION STYLES ===== */
+.testimonials {
+    margin-top: 2rem; /* Adjust spacing to align with other sections */
+    padding: 1.5rem;
+    background-color: #fff9ec;
+    border: 2px solid #dcc48e;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Embedded appearance */
+}
+
+.testimonials h2 {
+    margin-bottom: 1.5rem;
+    color: #3b3646;
+}
+
+.testimonial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid #dcc48e;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+/* ====== CONTACT SECTION STYLES ====== */
+.contact {
+    background-color: #fff9ec;
+    border: 2px solid #dcc48e;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Embedded appearance */
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #3b3646;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #44415a;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #27233A;
+}
+
+.contact-info a {
+    color: inherit; /* Match the surrounding text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: none; /* Ensure no underline on hover */
+    color: #3b3646; /* Slightly darker color for hover effect */
+}
+
+/* ===== SERVICES SECTION STYLES ====== */
+.services {
+    background-color: #fff9ec;
+    border: 2px solid #dcc48e;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Embedded appearance */
+}
+
+.services h2 {
+    font-size: 2rem;
+    color: #3b3646;
+    margin-bottom: 1rem;
+}
+
+.services p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #44415a;
+    margin-bottom: 1.5rem;
 }
 
 /* ====== MAIN CONTENT ====== */
@@ -261,10 +384,9 @@ header {
 
 .main-content {
     max-width: 900px;
-    margin: 0 auto;
     text-align: center;
 }
-
+                        /* ===== APPLY PAGE STYLES ====== */
 /* ====== FORM STYLES ====== */
 form {
     max-width: 600px;
@@ -448,7 +570,7 @@ input[type="radio"]:checked + .step {
     display: none;
 }
 
-/* ====== JOBS PAGE ====== */
+                        /* ====== JOBS PAGE ====== */
 .job-section {
     max-width: 900px;
     margin: 2rem auto;
@@ -460,7 +582,6 @@ input[type="radio"]:checked + .step {
     overflow: hidden; /* Ensures smooth animation */
 }
 
-/* Job Title (Summary) Styling */
 .job-title {
     font-size: 1.8rem;
     color: #27233A;
@@ -491,28 +612,19 @@ details {
 }
 
 details[open] {
-    background-color: #f4efe2; /* Slightly lighter background when open */
-    border-color: #f4efe2; /* Matches the open state background */
+    border: 2px solid #dcc48e;
+    background-color: #fff9ec; /* Slightly lighter background when open */
+    border-color: #fff9ec; /* Matches the open state background */
 }
 
 details summary {
+    border: 2px solid #dcc48e;
     list-style: none;
     outline: none;
 }
 
 details[open] {
     animation: dropdown 0.3s ease forwards;
-}
-
-@keyframes dropdown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .job-section p,
@@ -538,15 +650,264 @@ details[open] {
 }
 
 /* Details and Summary Styling */
-summary {
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 0.5rem;
-}
 
 summary:hover {
     color: #3b3646;
+}
+
+.jobs-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    justify-content: center; /* Center-align job sections */
+    gap: 2rem; /* Add spacing between job sections */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.job-section {
+    flex: 1 1 calc(33.333% - 2rem); /* Ensure three sections per row with spacing */
+    min-width: 300px; /* Minimum width for smaller screens */
+    max-width: 400px; /* Limit maximum width */
+    padding: 1.5rem;
+    background-color: #fff9ec;
+    border: 2px solid #dcc48e;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+}
+
+.job-title {
+    font-size: 1.8rem;
+    color: #27233A;
+    margin-bottom: 1rem;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #dcc48e; /* Default brown color */
+    border-radius: 8px;
+    border: 2px solid #dcc48e; /* Adds a border for a polished look */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.job-title:hover {
+    background-color: #f4efe2; /* Light grey on hover */
+    transform: scale(1.02); /* Slightly enlarges the title on hover */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+}
+
+.jobs-description {
+    margin: 2rem;
+    border: 2px solid #dcc48e;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #ffedd3; /* Restore subtle background color */
+    transition: all 0.3s ease;
+}
+
+.jobs-description p {
+    margin: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.jobs-description summary {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #27233A;
+    background-color: white;
+    padding: 0.8rem 1rem;
+    border: 2px solid #dcc48e;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.jobs-description summary:hover {
+    background-color: #dcc48e;
+    transform: scale(1.02);
+    color: #44415a;
+}
+
+.jobs-description ol,
+.jobs-description ul {
+    margin: 1.5rem 2rem;
+    padding-left: 1.5rem;
+    list-style-position: inside;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #27233A;
+    background-color: white;
+    border: 2px solid #dcc48e;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.jobs-description ol li,
+.jobs-description ul li {
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+}
+
+.jobs-description ol {
+    list-style-type: decimal;
+}
+
+.jobs-description ul {
+    list-style-type: disc;
+}
+
+.jobs-description ul li strong {
+    color: #44415a;
+}
+
+.view-jobs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 400px;
+    background-color: #fff9ec;
+    border: 2px solid #dcc48e;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view-jobs:hover {
+    transform: scale(1.05); /* Slightly enlarges the section on hover */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+}
+
+.view-jobs p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #27233A;
+    margin-bottom: 1rem;
+}
+
+.view-jobs a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #44415a;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-jobs a:hover {
+    background-color: #3a3a4d;
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+/* ====== JOB DESCRIPTION PAGES STYLES ====== */
+.job-description {
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 1.5rem;
+    background-color: #fff9ec;
+    border: 2px solid #dcc48e;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.jobs-h2 {
+    font-size: 2rem;
+    color: #3b3646;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.jobs-h3 {
+    font-size: 1.5rem;
+    color: #27233A;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #dcc48e;
+    border-radius: 8px;
+    border: 2px solid #dcc48e;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.jobs-h3:hover {
+    background-color: #f4efe2;
+    transform: scale(1.02);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown {
+    margin-bottom: 1.5rem;
+    border: 2px solid #dcc48e;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff9ec;
+    transition: all 0.3s ease;
+}
+
+.dropdown summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #27233A;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+}
+
+.dropdown summary:hover {
+    color: #3b3646;
+}
+
+.dropdown ol,
+.dropdown ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #27233A;
+}
+
+.dropdown li {
+    margin-bottom: 0.5rem;
+}
+
+.back {
+    display: inline-block;
+    margin: 2rem auto;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #dcc48e;
+    border-radius: 8px;
+    background-color: #ffedd3;
+    color: #27233A;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.back:hover {
+    transform: scale(0.9);
+    background-color: #44415a;
+    color: white;
+}
+
+.back a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.back:hover a {
+    color: white;
 }
 
 /* ====== ABOUT PAGE STYLES ====== */
@@ -586,100 +947,14 @@ summary:hover {
     margin: 0 auto; /* Center the text */
 }
 
-/* ===== TESTIMONIALS SECTION STYLES ===== */
-.testimonials {
-    margin-top: 2rem; /* Adjust spacing to align with other sections */
-    padding: 1.5rem;
-    background-color: #fff9ec;
-    border: 2px solid #dcc48e;
-    border-radius: 12px;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Embedded appearance */
+.values-list{
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
-.testimonials h2 {
-    margin-bottom: 1.5rem;
-    color: #3b3646;
-}
-
-.testimonial-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.testimonial {
-    background-color: #fff;
-    padding: 1.5rem;
-    border: 1px solid #dcc48e;
-    border-radius: 8px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial p {
-    margin: 0.5rem 0;
-    line-height: 1.6;
-}
-
-/* ====== CONTACT SECTION STYLES ====== */
-.contact {
-    background-color: #fff9ec;
-    border: 2px solid #dcc48e;
-    border-radius: 12px;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Embedded appearance */
-}
-
-.contact h2 {
-    font-size: 2rem;
-    color: #3b3646;
-    margin-bottom: 1rem;
-}
-
-.contact p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #44415a;
-    margin-bottom: 1.5rem;
-}
-
-.contact-info {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #27233A;
-}
-
-.contact-info a {
-    color: inherit; /* Match the surrounding text color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold;
-}
-
-.contact-info a:hover {
-    text-decoration: none; /* Ensure no underline on hover */
-    color: #3b3646; /* Slightly darker color for hover effect */
-}
-
-/* ===== SERVICES SECTION STYLES ====== */
-.services {
-    background-color: #fff9ec;
-    border: 2px solid #dcc48e;
-    border-radius: 12px;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Embedded appearance */
-}
-
-.services h2 {
-    font-size: 2rem;
-    color: #3b3646;
-    margin-bottom: 1rem;
-}
-
-.services p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #44415a;
-    margin-bottom: 1.5rem;
-}
-
-/* ====== FOOTER ====== */
+/* ====== FOOTER STYLES ====== */
+/* Footer container styles */
 footer {
     background-color: #27233A;
     color: white;

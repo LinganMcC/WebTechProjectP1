@@ -148,6 +148,7 @@ section {
     gap: 2rem; /* Add spacing between job sections */
     max-width: 1200px;
     margin: 0 auto;
+    transform: translateY(100%) ;
 }
 
 .job-section {
