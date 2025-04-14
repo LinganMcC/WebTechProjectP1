@@ -27,7 +27,11 @@
 
 /* General styles for the body and text */
 body {
-    background-color: #f9f5f0;
+    background-image: url(../styles/images/background-color.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     color: #27233A;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -168,13 +172,13 @@ header {
 }
 
 /* Logo image styles */
-.navbar-image {
+#navbar-image {
     width: 8em;
     height: auto;
 }
 
 /* Header title styles */
-.header-title {
+#header-title {
     font-size: 2rem;
     color: #3b3646;
     font-weight: bold;
@@ -183,7 +187,7 @@ header {
 
 /* ===== NAVBAR STYLES ===== */
 /* Navbar container styles */
-.navbar {
+#navbar {
     background-color: #ffedd3;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-bottom: 2px solid #dcc48e;
@@ -198,7 +202,7 @@ header {
 }
 
 /* Navbar link styles */
-.navbar-list a {
+#navbar-list a {
     color: #27233A;
     font-weight: bold;
     text-decoration: none;
@@ -208,7 +212,7 @@ header {
 }
 
 /* Navbar link hover effect */
-.navbar-list a:hover {
+#navbar-list a:hover {
     background-color: #44415a;
     color: white;
     transform: scale(1.05);
@@ -386,6 +390,8 @@ header {
     max-width: 900px;
     text-align: center;
 }
+
+
                         /* ===== APPLY PAGE STYLES ====== */
 /* ====== FORM STYLES ====== */
 form {
@@ -525,7 +531,7 @@ input[type="submit"]:hover {
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     max-width: 900px; /* Increase the width of the form */
-    width: 90%; /* Ensure it adapts to smaller screens */
+
 }
 
 /* Form Header */
@@ -537,15 +543,6 @@ input[type="submit"]:hover {
     padding-bottom: 0.5rem;
 }
 
-/* Progressive Form Styles */
-.step {
-    display: none;
-    padding: 1rem;
-    border: 2px solid #dcc48e;
-    border-radius: 8px;
-    background-color: #fff9ec;
-    margin-bottom: 1rem;
-}
 
 input[type="radio"]:checked + .step {
     display: block;
@@ -931,6 +928,31 @@ summary:hover {
     border: 1px solid #dcc48e;
 }
 
+/* ====== PHOTO ASIDE AND PHOTO CARD STYLES ====== */
+
+.photo-card {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.photo-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.photo-card figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+/* ====== TEAM PROFILES STYLES ====== */
+
 .about-section {
     background-color: #dcc48e; /* Highlight background */
     color: #27233A; /* Text color */
@@ -960,12 +982,27 @@ summary:hover {
     margin: 0; /* Remove default margin */
 }
 
+#team-profiles .member-card h3 {
+    text-align: center; 
+    margin-bottom: 1rem; 
+}
+
+#team-profiles .member-card {
+    margin-bottom: 2rem; 
+}
+
 /* ====== FOOTER STYLES ====== */
-/* Footer container styles */
 footer {
     background-color: #27233A;
+    display: inline-block;
     color: white;
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
+}
+
+.jira-link{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;  
 }

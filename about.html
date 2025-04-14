@@ -13,22 +13,33 @@
 
 <body>
     <header>
-        <div class="header-top">
+        <div id="header-top">
             <a href="index.html">
-                <img class="navbar-image" src="styles/images/logo.png" alt="EcruSoft Solutions Logo">
+                <img id="navbar-image" src="styles/images/logo.png" alt="EcruSoft Solutions Logo">
             </a>
-            <h1 class="header-title">The Faces Behind EcruSoft Solutions</h1>
+            <h1 class="header-title">About</h1>
         </div>
-        <nav class="navbar">
-            <ul class="navbar-list">
+        <nav id="navbar">
+            <ul id="navbar-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Careers</a></li>
+                <li><a href="jobs.html">Jobs</a></li>    
                 <li><a href="apply.html">Apply</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
-
+    <aside class="photo-aside">
+        <figure class="photo-card">
+            <figcaption>The EcruSoft Solutions Team</figcaption>
+            <img src="styles/images/group_photo.png" alt="Our Collaborative Team" loading="lazy">
+            <figcaption>
+                Liam McCarthy, Justin Mac, Sokhour Kim, Dylan Jayawardhana
+            </figcaption>
+            <figcaption>
+                Student IDs: 105336043, 105921614, 104345352, 10590395
+            </figcaption>
+        </figure>
+    </aside> 
     <main>
         <section class="about-section">
             <h2>Our Collaborative Journey</h2>
@@ -43,17 +54,17 @@
         <section id="team-profiles">
             <h2>Our Collaborative Journey</h2>
             <div class="member-card">
-                <h3>Liam McCarthy - 105336043</h3>
+                <h3>Liam McCarthy</h3>
                 <p>
                     A creative force with a keen eye for design, Liam laid the foundation for our online presence
-                    by developing the Index page and its core CSS. His commitment to a user-friendly experience
+                    by developing the Index page, the core CSS foundation and modularity for smaller screens and mobile devices. His commitment to a user-friendly experience
                     is invaluable to our team.
                 </p>
-                <p><strong>Key Contributions:</strong> Index page development, foundational CSS.</p>
+                <p><strong>Key Contributions:</strong> Index page development, foundational CSS, and modularity for smaller screen sizes.</p>
             </div>
-
+        
             <div class="member-card">
-                <h3>Justin Mac - 105921614</h3>
+                <h3>Justin Mac</h3>
                 <p>
                     The architect of our career section, Justin meticulously crafted the Job page and its
                     accompanying styles. His focus on structure and clarity ensures a seamless experience for
@@ -61,9 +72,9 @@
                 </p>
                 <p><strong>Key Contributions:</strong> Job page development and styling.</p>
             </div>
-
+        
             <div class="member-card">
-                <h3>Sokhour Kim - 104345352</h3>
+                <h3>Sokhour Kim</h3>
                 <p>
                     With a focus on engagement and information, Sokhour developed the Apply page and contributed
                     to the initial About page structure. His dedication to clear communication is vital to our
@@ -71,68 +82,61 @@
                 </p>
                 <p><strong>Key Contributions:</strong> Apply page development, initial About page contribution.</p>
             </div>
-
+        
             <div class="member-card">
-                <h3>Dylan Jayawardhana - 10590395</h3>
+                <h3>Dylan Jayawardhana</h3>
                 <p>
                     Bringing his unique insights, Dylan contributed to the development of the About page, helping
                     to shape our group's narrative and introduce us to our audience.
                 </p>
                 <p><strong>Key Contributions:</strong> About page contribution.</p>
             </div>
-        </section>
-
-        <section id="group-photo">
-            <h3>Our Team in Action</h3>
-            <figure>
-                <img src="styles/images/group_photo.png" alt="Our Collaborative Team" loading="lazy">
-                <figcaption>The EcruSoft Solutions Team</figcaption>
-            </figure>
-        </section>
-
+        </section>  
         <section id="members-interests">
             <h3>A Glimpse into Our Interests</h3>
             <p>Beyond our professional endeavors, we have a diverse range of interests that enrich our team dynamic
                 and foster creativity.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Sokhour Kim</th>
-                        <th>Justin Mac</th>
-                        <th>Liam McCarthy</th>
-                        <th>Dylan Jayawardhana</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th rowspan="3">Hobbies</th>
-                        <td colspan="5">Gaming</td>
-                    </tr>
-                    <tr>
-                        <td>Traveling</td>
-                        <td>Catapult woodchips at birds</td>
-                        <td>Music</td>
-                        <td>Basketball</td>
-                    </tr>
-                    <tr>
-                        <td>Cooking</td>
-                        <td>Confectionery</td>
-                        <td>Volleyball</td>
-                        <td>Music</td>
-                    </tr>
-                    <tr>
-                        <th>Personal Passion</th>
-                        <td>Coding</td>
-                        <td>Get money</td>
-                        <td>Cooking</td>
-                        <td>Reading</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Names:</th>
+                            <th>Sokhour Kim</th>
+                            <th>Justin Mac</th>
+                            <th>Liam McCarthy</th>
+                            <th>Dylan Jayawardhana</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="3">Hobbies</th>
+                            <td colspan="5">Gaming</td>
+                        </tr>
+                        <tr>
+                            <td>Traveling</td>
+                            <td>Catapult woodchips at birds</td>
+                            <td>Music</td>
+                            <td>Basketball</td>
+                        </tr>
+                        <tr>
+                            <td>Cooking</td>
+                            <td>Confectionery</td>
+                            <td>Volleyball</td>
+                            <td>Music</td>
+                        </tr>
+                        <tr>
+                            <th>Personal Passion</th>
+                            <td>Coding</td>
+                            <td>Get money</td>
+                            <td>Cooking</td>
+                            <td>Reading</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
-        <section id="group-profile">
+        <section id="group-profile" class="full-width-section">
             <h3>Our Shared Vision</h3>
             <article id="our-values">
                 <h4>Core Values</h4>
@@ -143,11 +147,9 @@
                 <ul class="values-list">
                     <li><strong>Collaboration:</strong> We believe in the power of teamwork and open communication.</li>
                     <li><strong>Innovation:</strong> We are constantly seeking new and creative solutions.</li>
-                    <li><strong>Excellence:</strong> We are committed to delivering high-quality work in everything we
-                        do.</li>
+                    <li><strong>Excellence:</strong> We are committed to delivering high-quality work in everything we do.</li>
                     <li><strong>Growth:</strong> We foster an environment of continuous learning and development.</li>
-                    <li><strong>Client Focus:</strong> We prioritize understanding and meeting the needs of our clients.
-                    </li>
+                    <li><strong>Client Focus:</strong> We prioritize understanding and meeting the needs of our clients.</li>
                 </ul>
             </article>
 
@@ -163,9 +165,12 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 EcruSoft Solutions. All Rights Reserved.</p>
-        <p>Best time of contact Monday - 12:30 to 2:30 PM AEST</p>
+    <footer id="footer">
+        <ul>
+            <li>&copy; 2025 EcruSoft Solutions. All Rights Reserved.</li>
+            <li>Best time of contact Monday - 12:30 to 2:30 PM AEST</li>
+            <li><a class="jira-link" href="https://liammccarthy.atlassian.net/jira/software/projects/SCRUM/boards/1">Jira</a></li>
+        </ul>
     </footer>
 </body>
 
