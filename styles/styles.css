@@ -764,6 +764,13 @@ summary:hover {
     color: #44415a;
 }
 
+.jobs-container p.description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #27233A;
+    margin-bottom: 1.5rem;
+}
+
 .view-jobs {
     display: flex;
     flex-direction: column;
